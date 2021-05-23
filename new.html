@@ -1,0 +1,594 @@
+<!Doctype HTML>
+<html>
+    <head>
+        <title>My Website</title>
+        <meta name="description" content="page description here">
+        <meta http-equiv="" content="text/html"; charset="utf-8">
+        <link href="dklogo.jpg" rel="icon">
+        <meta name="viewport" content="width=devidce-width, initial-scale=1.0">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');
+            *{
+                margin: 0;
+                padding: 0;
+            }
+            html{
+                  scroll-behavior: smooth;
+            }
+            body{
+                 margin:0;
+                 padding: 0;
+                 background: rgb(221, 23, 23);
+               
+                 
+            }
+            nav{
+                background: #ffff;
+               position: relative;
+               left: 2%;
+               right: 5%;
+                width: 95%;
+                height: auto;
+                font-size: 2rem;
+                font-family: 'Open Sans', sans-serif;
+                color: rgb(58, 22, 22);
+                padding: 15px;
+                border-bottom-left-radius: 30px;
+                border-bottom-right-radius: 30px;
+                filter: drop-shadow(0 0 0.50rem rgb(37, 34, 34));
+            }
+            a{
+                text-decoration: none;
+                color: black;
+                
+            }
+            nav img {
+                       width: 15%;
+            }
+            ul{
+                list-style: none;
+                float: right;
+                right: 10%;
+                
+            }
+            li{
+                display: inline;
+                padding: 5px;
+                font-size: 1.5rem;
+            }
+            li a:hover{
+                color: red;
+            }
+            .icon{
+                    width: 1.5rem;
+                    float: right;
+                    padding: 20px;
+                    display: none;
+                    cursor: pointer;
+            }
+            .slider{
+                      width: 80%;
+                      height: 40%;
+                      background:white;
+                      position: relative;
+                      left: 5%;
+                      margin: 3%;
+                      
+            }
+            
+            #services{
+                        display: flex;
+            }
+            input{
+                    outline: none;
+                    width: 200px;
+                    height: 50px;
+                    margin-top: 8%;
+            }
+            input:focus{
+              border:2px solid rgb(255, 22, 6);
+            }
+            .btn{
+                    background: rgb(0, 153, 255);
+                    width: 200px;
+                    height: 50px;
+                    border-radius: 10px;
+                    color: white;
+                    border: none;
+                    cursor: pointer;  
+                    margin: 2%;      
+            }
+            .btn:hover{
+                         background: red;
+            }
+            .box{
+                    width: 250px;
+                    height: 120px;
+                    background: white;
+                    margin: 3%;
+                    text-align: center;
+                    font-size: 2rem;
+                    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            }
+            .box p{
+                    margin-top: 15%;
+            }
+            .box:hover > .sidebox{
+                                      background: royalblue;
+                                     
+
+            }
+            .sidebox{
+                       float: right;
+                       width: 30px;
+                       height: 30px;
+                        position: relative;
+                        top: 17px;
+                       border-top-left-radius: 100px;
+            }
+            #aboutus{
+                width: 100%;
+                height: 300px;
+            }
+            #client{
+                      width: 100%;
+                      height: 250px;
+                      background: lightblue;
+                      margin-top: 2%;
+            }
+            hr{
+                 border-color:  lightblue;
+                 width: 80%;
+            }
+            .footer{
+                       width: 250px;
+                       height: auto;
+                       background: whitesmoke;
+                       padding: 20px;
+                       font-family: sans-serif;
+                       text-align: center;
+                       border-radius: 100px;
+                       position: relative;
+                       left: 35%;
+                       box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+                       margin: 3%;
+
+            }
+            .contact{
+                          width: 100%;
+                          height: auto;
+                          padding: 10px;
+                          background: rgb(220, 245, 195);
+                          display: flex;
+            }
+            .contact-1{
+                        width: 300px;
+                        height: 220px;
+                        border-bottom-right-radius: 20px;
+                        background: rgb(79, 18, 247);
+                        margin: 60px;
+                        text-align: center;
+                        font-size: 1.5rem;
+                        
+                        color: cornsilk;
+                        transition: 1s;
+                        
+            }
+            .contact-1:hover{
+                                  background: chocolate;
+                                
+            }
+            .heading{
+                    color: rgb(250, 6, 6);
+                    background: white;
+                    text-align: center;
+                    border-radius: 20px 0px 0px 20px;
+                    width: 250px;
+                    height: 50px;
+                    position: relative;
+                    left: 40%;
+                    padding: 5px;
+                    font-size: 2rem;
+                    font-family: montserrat, sans-serif;
+                    font-weight: bold;
+                    filter: drop-shadow(1px 1px 1px maroon);
+                    
+                }
+                #img-1{
+                        float: left;
+                        background-image: url("image/dm.png");
+                        background-size: cover;
+                        background-repeat: no-repeat;
+                        width: 250px;
+                        height: 250px;
+                        margin: 2%;
+                        filter: drop-shadow(0px 0px 2px maroon);
+                }
+                #content{
+                           float: right;
+                           color: whitesmoke;
+                           font-size: 1.3rem;
+                           font-family: montserrat,sans-serif;
+                           padding: 10px;
+                           margin: 4%;
+                          
+                }
+                strong{
+                    color: yellow;
+                    font-size: large;
+                }
+                h4{
+                     margin-left: 40%;    
+                     font-size: 2rem;  
+                     font-family: montserrat, sans-serif;
+                }
+                #client img{
+                                width: 20%;
+                                height: auto;
+                                padding: 40px;
+                }
+              .outer-wrapper {
+                    width: 60%;
+                    margin: 10px auto;
+                }
+  
+  .s-wrap {
+    width: 100%;
+    margin-bottom: 50px;
+    padding-bottom: 55%;
+    position: relative;
+    border: 5px solid #fff;
+    background-color: #efefe8;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+  }
+  .s-wrap > input {
+    display: none;
+  }
+  .s-wrap .s-content {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 500%;
+    height: 100%;
+    font-size: 0;
+    list-style: none;
+    transition: transform 1s;
+  }
+  .s-wrap .s-item {
+    display: inline-block;
+    width: 20%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .s-wrap .s-item-1 {
+    background-image: url("designing_banner.jpg");
+  }
+  .s-wrap .s-item-2 {
+    background-image: url("website_banner.jpg");
+  }
+  .s-wrap .s-item-3 {
+    background-image: url("digital_marketing.jpg");
+  }
+  
+  .s-type-1 .s-control {
+    position: absolute;
+    bottom: 18px;
+    left: 50%;
+    text-align: center;
+    transform: translateX(-50%);
+    transition-timing-function: ease-out;
+  }
+  .s-type-1 .s-control > label[class^=s-c-] {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin-right: 10px;
+    border-radius: 50%;
+    border: 1px solid #999;
+    background-color: #efefe8;
+    cursor: pointer;
+  }
+  .s-type-1 .s-nav label {
+    display: none;
+    position: absolute;
+    top: 50%;
+    padding: 5px 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+  .s-type-1 .s-nav label::before, .s-type-1 .s-nav label::after {
+    content: "";
+    display: block;
+    width: 8px;
+    height: 24px;
+    background-color: #fff;
+  }
+  .s-type-1 .s-nav label::before {
+    margin-bottom: -12px;
+  }
+  .s-type-1 .s-nav label.left {
+    left: 20px;
+  }
+  .s-type-1 .s-nav label.left::before {
+    transform: rotate(45deg);
+  }
+  .s-type-1 .s-nav label.left::after {
+    transform: rotate(-45deg);
+  }
+  .s-type-1 .s-nav label.right {
+    right: 20px;
+  }
+  .s-type-1 .s-nav label.right::before {
+    transform: rotate(-45deg);
+  }
+  .s-type-1 .s-nav label.right::after {
+    transform: rotate(45deg);
+  }
+  .s-type-1 #s-1:checked ~ .s-content {
+    transform: translateX(0%);
+  }
+  .s-type-1 #s-1:checked ~ .s-control .s-c-1 {
+    background-color: #333;
+  }
+  .s-type-1 #s-1:checked ~ .s-nav .s-nav-1 {
+    display: block;
+  }
+  .s-type-1 #s-2:checked ~ .s-content {
+    transform: translateX(-20%);
+  }
+  .s-type-1 #s-2:checked ~ .s-control .s-c-2 {
+    background-color: #333;
+  }
+  .s-type-1 #s-2:checked ~ .s-nav .s-nav-2 {
+    display: block;
+  }
+  .s-type-1 #s-3:checked ~ .s-content {
+    transform: translateX(-40%);
+  }
+  .s-type-1 #s-3:checked ~ .s-control .s-c-3 {
+    background-color: #333;
+  }
+  .s-type-1 #s-3:checked ~ .s-nav .s-nav-3 {
+    display: block;
+  }
+  .s-type-1 #s-4:checked ~ .s-content {
+    transform: translateX(-60%);
+  }
+  .s-type-1 #s-4:checked ~ .s-control .s-c-4 {
+    background-color: #333;
+  }
+  .s-type-1 #s-4:checked ~ .s-nav .s-nav-4 {
+    display: block;
+  }
+  .s-type-1 #s-5:checked ~ .s-content {
+    transform: translateX(-80%);
+  }
+  .s-type-1 #s-5:checked ~ .s-control .s-c-5 {
+    background-color: #333;
+  }
+  .s-type-1 #s-5:checked ~ .s-nav .s-nav-5 {
+    display: block;
+  }
+  
+  .s-type-2 .s-content {
+    animation: slider-animation 50s ease-in-out infinite;
+  }
+  .s-type-2 .s-content:hover {
+    animation-play-state: paused;
+  }
+  
+  @keyframes slider-animation {
+    0%, 7% {
+      transform: translateX(0%);
+    }
+    12.5%, 19.5% {
+      transform: translateX(-20%);
+    }
+    25%, 32% {
+      transform: translateX(-40%);
+    }
+    37.5%, 44.5% {
+      transform: translateX(-60%);
+    }
+    50%, 57% {
+      transform: translateX(-80%);
+    }
+    62.5%, 69.5% {
+      transform: translateX(-60%);
+    }
+    75%, 82% {
+      transform: translateX(-40%);
+    }
+    87.5%, 94.5% {
+      transform: translateX(-20%);
+    }
+  }
+  @media(max-width:800px){
+      .links{
+          display: none;
+         padding: 4.5px;
+         color: white;
+         float: left;
+         
+
+      }
+      .links a{
+          color: white;
+          font-size: 1rem;
+      }
+      .links a:hover{
+                       color: white;
+                       border-bottom: 2px solid whitesmoke;
+      }
+      .outer-wrapper{
+          margin-top: 15%;
+      }
+      .icon{
+            display: block;
+      }
+      nav img{
+               width: 30%;
+      }
+      .heading{
+                   left: 30%;
+                   width: 200px;
+                   height: 30px;
+                   font-size: 1.5rem;
+      }
+      #img-1{
+               margin-left: 22%;
+      }
+      #client{
+               margin-top: 10%;
+      }
+      #client img{
+                     width: 30%;
+      }
+      #services{
+                  display: grid;
+                  margin-left: 20%;
+      }
+      .footer{
+         width: 200px;
+         height: 50px;
+         border-radius: 100px;
+         margin-top: 50%;
+         padding: 3px;
+         text-align: center;
+         align-items: center;
+         font-size: 0.8rem;
+         left: 25%;
+      }
+      .footer p{
+                   margin-top: 10px;
+      }
+      .contact{
+           display: grid;
+      }
+  }
+        </style>
+        <script  src="new.js"></script>
+    </head>
+    <body>
+        <!--navbar started-->
+        <nav>
+            <a href="#"><img src="logo.png"></a>
+            <img class="icon" src="icon.png" onclick="show()">
+                <ul class="links">
+                    <li><a href="#aboutus">About us</a></li>
+                    <li><a href="#client">Our Clients</li>
+                      <li><a href="#services">Our Services</li>
+                    <li><a href="#">Contact us</li>
+                </ul>
+                
+        </nav>
+        <!--navbar ends-->
+        <!--slider started-->
+        <section>
+           
+                <div class="outer-wrapper">
+                    <div class="s-wrap s-type-2" role="slider">
+                      <ul class="s-content">
+                        <li class="s-item s-item-1"></li>
+                        <li class="s-item s-item-2"></li>
+                        <li class="s-item s-item-3"></li>
+                      </ul>
+                    </div>
+                  </div>
+
+        </section>
+        <!--slider ended-->
+        <!--about us-->
+        <section id="aboutus">
+                <div class="heading">
+                    <p>What we Do?</p>
+                </div>
+                <div class="row">
+                    <div class="column" id="img-1"></div>
+                    <div class="column" id="content">
+                        <p>We are the Leading Graphic designing agency in <emp>Satna, Madhya Pradesh.</emp><br>We provide various graphic designing services like <strong>Logo Designs, Banner Designs,<br> Social media posts, Website designing, Menu card designs, Business cards designs.</strong><br>
+                        We are also working in Social Media Marketing. We make our clients<br> Social Media presence More effective and help them to grow their Business Digitally.<br> In this Era of Digitalisation we help Business owners 
+                        to reach more<br> customers and expand their Business.  </p>
+                    </div>
+                </div>
+        </section>
+        <!--aboutus ended-->
+        <hr>
+        <!--client-->
+        <section id="client">
+                  <h4>Our Clients</h4>
+                  <marquee>
+                    <img src="image/small_2.png">
+                    <img src="image/mobile_logo.png">
+                    <img src="image/cake_logo.png" style="width: 12%;">
+                    <img src="image/maan_vision_logo.png" style="width: 10%;">
+                    <img src="image/car_logo.png" style="width: 10%;">
+                    
+                  </marquee>
+        </section><br>
+        <hr style="float: right; width: 60%;"><br>
+        <!--serives-->
+       <section id="services">
+          <div class="box">
+            <p>Logo Designs</p>
+             <div class="sidebox"></div>
+          </div>
+          <div class="box">
+            <p>Business cards</p>
+            <div class="sidebox"></div>
+         </div>
+         <div class="box">
+          <p  style="font-size: 1.5rem; font-weight: bold;">Social Media posts</p>
+          <div class="sidebox" style="top: 27px;"></div>
+       </div>
+       <div class="box">
+        <p>Web Banners</p>
+        <div class="sidebox"></div>
+       </div>
+       
+       </section>
+       <!--contact us-->
+       <section class="contact">
+           <div class="contact-1">
+             <br>
+               <b>Email : </b>
+               <p>dkdesigners98@gmail.com</p>
+           </div>
+           <div class="contact-1">
+            <br>
+            <b>Call us on: </b>
+            <p>+91 8305025575</p>
+          </div>
+          <div class="contact-1">
+            <br>
+            <b>Leave us a message: </b>
+            <input type="text" placeholder="your message" id="msg"><br>
+            <span></span>
+            <button class="btn" >Send Message</button>
+          </div>
+       </section>
+       <!--services end-->
+       <section class="footer">
+            <p>Designed and developed by <br><b>DK Designers</b></p>
+
+       </section>
+  <script>
+   var x = document.getElementById("#msg").value;
+   if(x.length == 0){
+     alert("Please enter any message!");
+   }
+   else{
+       alert("Thanku for contacting us! Our Team will contact you soon");
+   }
+  </script>
+    </body>
+
+
+
+</html>
